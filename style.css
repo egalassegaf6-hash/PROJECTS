@@ -1,0 +1,125 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   2. NAVBAR DESKTOP STYLES
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 100;
+}
+
+.navbar .nav-logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-menu ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /* Jarak antar menu */
+}
+
+.navbar .nav-menu ul li .nav-link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-menu ul li .nav-link:hover:not(.btn-black) {
+    color: #666666;
+}
+
+/* Style Tombol Hitam Spesifik Menyatu di Navigasi */
+.navbar .nav-menu ul li .nav-link.btn-black {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-menu ul li .nav-link.btn-black:hover {
+    background-color: #222222;
+}
+
+/* Sembunyikan Hamburger di Desktop */
+.navbar .hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE STYLES (Mobile Phone)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+
+    /* Tampilkan Hamburger di Mobile */
+    .navbar .hamburger-menu {
+        display: block;
+    }
+
+    /* Ubah menu navigasi desktop menjadi laci (drawer) mobile */
+    .navbar .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        /* Sembunyikan di kiri luar layar */
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 30px 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    /* Susun link menu berderet ke bawah */
+    .navbar .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* Lebarkan tombol hitam di mobile agar proporsional */
+    .navbar .nav-menu ul li .nav-link.btn-black {
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    /* Class pemicu dari JavaScript untuk memunculkan menu */
+    .navbar .nav-menu.active {
+        left: 0;
+    }
+}
