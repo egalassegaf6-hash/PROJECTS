@@ -211,6 +211,108 @@ body {
     line-height: 1.5;
 }
 
+/* ==========================================================================
+   8. FEATURE SPLIT DESKTOP STYLES (Esensi Flexbox Row)
+   ========================================================================== */
+.feature-split {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.feature-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+/* Mengatur Kolom Teks (Lebar Seimbang 50%) */
+.feature-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.feature-content .section-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.feature-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature-item .subheading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.feature-item .body-text {
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Pengaturan Tombol (Flexbox Horizontal Bersandingan) */
+.feature-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.feature-actions .btn-black {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+/* Style Baru: Tombol Sekunder Abu-Abu */
+.feature-actions .btn-secondary {
+    display: inline-block;
+    background-color: #e5e5e5;
+    color: #000000;
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.feature-actions .btn-secondary:hover {
+    background-color: #dbdbdb;
+}
+
+/* Mengatur Kolom Gambar (Lebar Seimbang 50%) */
+.feature-image-box {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
 
 
 
@@ -297,10 +399,41 @@ body {
     /* Sihir CSS Grid untuk Mobile: Cukup ubah template kolomnya */
     .products-grid {
         grid-template-columns: 1fr;
-        /* Di HP, susunan kolom langsung otomatis jadi 1 baris vertikal penuh */
         gap: 40px;
-        /* Jarak antar kartu sedikit dijauhkan agar lega */
     }
 
     /* PRODUCT SECTION STYLE */
+
+    /* FEATURE SPLIT STYLES */
+    .feature-split {
+        padding: 40px 5%;
+    }
+
+    /* Memutar arah layout dari menyamping menjadi tumpuk vertikal */
+    .feature-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Memastikan konten teks melebar penuh saat mobile */
+    .feature-content,
+    .feature-image-box {
+        width: 100%;
+    }
+
+    /* Membuat tombol menyesuaikan grid mobile jika diperlukan */
+    .feature-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-actions .btn-black,
+    .feature-actions .btn-secondary {
+        flex: 1;
+        text-align: center;
+        /* Tombol membagi dua ruang seimbang di layar HP */
+    }
+
+    /* FEATURE SPLIT STYLES */
 }
