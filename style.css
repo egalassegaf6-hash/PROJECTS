@@ -314,6 +314,175 @@ body {
     object-fit: cover;
 }
 
+/* CONTACT STYLE */
+.contact {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.contact .title-contact {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact .flexbox-container-card {
+    display: flex;
+    gap: 20px;
+}
+
+.contact .flexbox-container-card .contact-card {
+    background-color: #e8e6e6;
+    padding: 20px;
+}
+
+.contact .title-card {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact .detail-list-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact .column-list .title-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.contact .column-list .description {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+}
+
+/* CONTACT STYLE */
+
+/* FOOTER */
+.container-footer {
+    width: 100%;
+    padding: 80px 8%;
+    background-color: #ffffff;
+
+}
+
+/* Top Section */
+.top-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.section-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #333;
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #374151;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/* Bottom Section */
+.bottom-section {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.site-info h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #666;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #000;
+}
+
+.column h4 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    color: #222;
+}
+
+.column ul {
+    list-style: none;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+}
+
+.column ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
 
 
 
@@ -406,7 +575,7 @@ body {
 
     /* FEATURE SPLIT STYLES */
     .feature-split {
-        padding: 40px 5%;
+        padding: 40px 8%;
     }
 
     /* Memutar arah layout dari menyamping menjadi tumpuk vertikal */
@@ -436,4 +605,47 @@ body {
     }
 
     /* FEATURE SPLIT STYLES */
+
+    /* SECTION CONTACT STYLE */
+    .section-contact {
+        padding: 40px 5%;
+        background-color: #ffffff;
+    }
+
+    .contact-section-container {
+        width: 100%;
+        display: flex;
+    }
+
+    .title-contact h2 {
+        font-size: 32px;
+        color: red;
+    }
+
+    /* SECTIOM CONTACT STYLES */
+
+
+    .flexbox-container-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .title-contact {
+        text-align: center;
+    }
+
+    /* Footer */
+    .bottom-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Footer */
+
+
 }
